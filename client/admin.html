@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-page="admin">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Swift Bridge Logistics</title>
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+    <header class="site-header admin-header">
+        <div class="admin-headbar">
+            <div class="dashboard-brand">
+                <img src="assets/logo.png" alt="Swift Bridge Logistics" class="logo nav-logo" />
+                <div>
+                    <span class="eyebrow">Swift Bridge Logistics</span>
+                    <h1>Admin Dashboard</h1>
+                </div>
+            </div>
+            <button id="logoutButton" class="btn btn-secondary">Logout</button>
+        </div>
+    </header>
+
+    <main class="page-shell admin-page">
+        <section class="dashboard-grid">
+            <div class="dashboard-panel">
+                <div class="panel-header">
+                    <h2>New shipment</h2>
+                    <p>Create a shipment and generate a tracking number.</p>
+                </div>
+                <form id="createShipmentForm" class="dashboard-form">
+                    <label for="trackingNumber">Tracking Number (optional)</label>
+                    <input id="trackingNumber" name="trackingNumber" type="text"
+                        placeholder="Leave empty to auto-generate" />
+                    <label for="from">Sender (From)</label>
+                    <input id="from" name="from" type="text" placeholder="Los Angeles, CA" required />
+                    <label for="to">Destination (To)</label>
+                    <input id="to" name="to" type="text" placeholder="New York, NY" required />
+                    <label for="status">Status</label>
+                    <select id="status" name="status" required>
+                        <option>Package Received</option>
+                        <option>In Transit</option>
+                        <option>Out for Delivery</option>
+                        <option>Delivered</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Create Shipment</button>
+                </form>
+                <div id="createMessage" class="message"></div>
+            </div>
+
+            <div class="dashboard-panel">
+                <div class="panel-header">
+                    <h2>Update Status</h2>
+                    <p>Update shipment status by tracking number.</p>
+                </div>
+                <form id="updateStatusForm" class="dashboard-form">
+                    <label for="updateTrackingNumber">Tracking Number</label>
+                    <input id="updateTrackingNumber" name="updateTrackingNumber" type="text" placeholder="US123456"
+                        required />
+                    <label for="updateStatus">New Status</label>
+                    <select id="updateStatus" name="updateStatus" required>
+                        <option>Package Received</option>
+                        <option>In Transit</option>
+                        <option>Out for Delivery</option>
+                        <option>Delivered</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Update Status</button>
+                </form>
+                <div id="updateMessage" class="message"></div>
+            </div>
+
+            <div class="dashboard-panel shipments-panel">
+                <div class="panel-header">
+                    <h2>Shipment list</h2>
+                    <p>Update status, location, or remove shipments.</p>
+                </div>
+                <div id="shipmentsList" class="shipment-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <img src="assets/logo.png" alt="Swift Bridge Logistics" class="logo footer-logo" />
+        <p>Admin controls for Swift Bridge Logistics logistics operations.</p>
+        <div class="contact-info">
+            <p><strong>Contact Us:</strong></p>
+            <ul>
+                <li>Email: <a href="mailto:swiftbridgelogistics@gmail.com">swiftbridgelogistics@gmail.com</a></li>
+                <li>Phone: <a href="tel:+13465631025">+1 (346) 563-1025</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script defer src="/app.js"></script>
+</body>
+
+</html>

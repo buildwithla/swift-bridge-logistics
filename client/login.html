@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-page="login">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login | Swift Bridge Logistics</title>
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+    <main class="auth-shell">
+        <div class="auth-card">
+            <img src="assets/logo.png" alt="Swift Bridge Logistics" class="logo login-logo" />
+            <h1>Admin login</h1>
+            <p>Secure access to the Swift Bridge Logistics dashboard.</p>
+
+            <form id="loginForm" class="login-form">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="admin@swiftbridge.com" required />
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="Enter password" required />
+
+                <button type="submit" class="btn btn-primary">Sign In</button>
+                <p class="hint">Use email <strong>admin@swiftbridge.com</strong> and password <strong>Admin@123</strong>
+                </p>
+            </form>
+            <p id="loginMessage" class="message"></p>
+        </div>
+    </main>
+
+    <footer class="site-footer auth-footer">
+        <img src="assets/logo.png" alt="Swift Bridge Logistics" class="logo footer-logo" />
+        <p>Secure admin access for shipment controls.</p>
+        <div class="contact-info">
+            <p><strong>Contact Us:</strong></p>
+            <ul>
+                <li>Email: <a href="mailto:swiftbridgelogistics@gmail.com">swiftbridgelogistics@gmail.com</a></li>
+                <li>Phone: <a href="tel:+13465631025">+1 (346) 563-1025</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script defer src="/app.js"></script>
+</body>
+
+</html>
