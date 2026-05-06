@@ -10,7 +10,7 @@ Full-stack logistics tracking web application with admin dashboard and logo inte
 - JWT admin authentication
 - Admin can create, update, and delete shipments
 - Tracking endpoint for shipment status and timeline
-- Seeded demo shipment `US33BGH0001`
+
 
 ## Quick Start
 1. Install dependencies:
