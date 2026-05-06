@@ -16,7 +16,7 @@ const Shipment = require('./models/Shipment');
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, '')));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/shipments', shipmentRoutes);
@@ -37,7 +37,7 @@ app.get('/api/brand', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 const mongoUri = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/swiftbridge';

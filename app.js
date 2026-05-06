@@ -40,7 +40,7 @@ function clearToken() {
 }
 
 function redirectToLogin() {
-    window.location.href = '/login.html';
+    window.location.href = 'login.html';
 }
 
 function buildTimelineList(timeline = []) {
@@ -123,7 +123,7 @@ function initLoginPage() {
                 body: JSON.stringify({ email, password })
             });
             saveToken(response.token);
-            window.location.href = '/admin.html';
+            window.location.href = 'admin.html';
         } catch (error) {
             setLoginMessage(error.message, true);
         }

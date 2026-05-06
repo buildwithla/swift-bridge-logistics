@@ -1,16 +1,16 @@
 const carouselData = [
     {
-        src: '/image/header1.PNG',
+        src: 'image/header1.PNG',
         title: 'Streamlined Freight Management',
         caption: 'Move more cargo with a smarter, faster logistics platform built for modern business.'
     },
     {
-        src: '/image/header2.PNG',
+        src: 'image/header2.PNG',
         title: 'Trusted Last-Mile Delivery',
         caption: 'Full visibility from pickup to delivery with premium tracking and support.'
     },
     {
-        src: '/image/header3.PNG',
+        src: 'image/header3.PNG',
         title: 'Operations Designed for Scale',
         caption: 'A responsive logistics experience that adapts to every shipment and route.'
     }
